@@ -8,12 +8,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args)
     {
-        // Create an instance of the data access object (DAO)
-        CityDaoJDBC citydaojdbc = new CityDaoJDBC();
-
-        City newCity = new City (0, "Far Cry", "EGA", "District 1", 1234561);
-
-        City addedCity = citydaojdbc.add(newCity);
+        City newCity = new City(0, "New York", "USA", "New York", 8419000);
+        CityDaoJDBC cityDao = new CityDaoJDBC();
+        City addedCity = cityDao.add(newCity);
+        System.out.println("Added City: " + addedCity);
 
 
         if (addedCity != null) {
